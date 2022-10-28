@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendas    </title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script   src="./js/script.js"> </script>
+
+</head>
+<body>
+    <header>
+        <h1>Vendas</h1>
+    </header>
+
+    <main>
+        <div class="title">
+
+            <h2>Produtos</h2>
+            <span> Lista de Produtos</span>
+        </div>
+        <div class="card">
+
+
+            <div class="labelNumPed">
+                <label id="lb_numped" onload="numeroPedido()">Numero do Pedido: 1 (autoincremento)</label>  <p></p>    
+            </div>
+    
+            <div class="lineInput">
+                <label>Cliente</label>      
+                <input type="text" id="cliente" placeholder="Nome do Cliente"><p></p>
+            </div>
+    
+            <div class="lineInput">
+    
+                <label>Produto</label>
+                <p></p>
+                <input type="text" id="nome" placeholder="Nome do Produto">
+    
+                <label>Quantidade</label>      
+                <input type="text" id="qtd" placeholder="Quantidade do Produto">
+    
+                <label>Valor Unitario</label>
+                <input type="text" id="vlunit" placeholder="Valor Unitario do Produto" onkeyup="produto.valorTotalItem()">
+
+                <label class="labelNumPed" id ="lbl_total_item">Valor Total do Item R$ 0,00</label>
+            </div>
+    
+       
+            <p></p>
+           
+            <button class="buttonIncluir" onclick="produto.adicionar()">Incluir</button>
+            
+        </div>
+
+        <div class="content">
+           <table border = 1>
+               <thead>
+                   <th>Nome</th>
+                   <th>Quantidade</th>
+                   <th>Valor Unitario</th>
+                   <th>Valor Total</th>
+                   
+               </thead>
+               <tbody id="tbody">
+               
+               </tbody>
+           </table> 
+        </div>
+
+         
+        <button class="buttonSalvar" onclick="window.location.href = 'inicio.html'">Cancelar</button>
+        <button class="buttonSalvar" onclick="produto.salvar()">Salvar</button>
+    </main>
+
+
+
+   
+    
+</body>
+</html>

@@ -1,0 +1,12 @@
+{
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "name": "banco_teste",
+            "group": "banco",
+            "database": "banco.db"
+        }
+    ],
+    "liveServer.settings.port": 5501
+}
